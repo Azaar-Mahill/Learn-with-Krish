@@ -12,17 +12,10 @@ console.log('minimum value is : '+min);
 let max = Math.max.apply(null, array);
 console.log('maximum value is : '+max);
 
-//addition upto number before minimum
-let Addition1 = 0;
-
-for(let a=0; a<min; a++){
-    Addition1 += a;
-}
-
 //addition upto maximum
 let Addition2 = 0;
 
-for(let b=0; b<(max+1); b++){
+for(let b=min; b<max+1; b++){
     Addition2 += b;
 }
 
@@ -33,9 +26,14 @@ for(let c=0; c<array.length; c++){
     Addition3 += array[c];
 }
 
+let check = Addition2 - Addition3;
+let answer;
+if(check==0){
+    answer="Either "+(min-1)+" or "+(max+1);
+}else{
+    answer=String(check);
+}
 
-let answer = Addition2 - Addition1 - Addition3;
-answer=String(answer);
 console.log("answer : "+answer);
 
 //Create server
