@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Azaar_Mahill_learn_with_krish_1705478708457-push-trigger-input-set
+  identifier: Build_Azaar_Mahill_learn_with_krish_1705478708457pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: myFirstProject
+  pipeline:
+    identifier: Build_Azaar_Mahill_learn_with_krish_1705478708457
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
